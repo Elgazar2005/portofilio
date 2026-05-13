@@ -9,7 +9,7 @@ import { FaSun, FaMoon, FaGithub } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import useTheme from "../../Hooks/usetheme";
+import useTheme from "../../hooks/usetheme";
 import { Link } from "react-router-dom";
 
 function NavList() {
