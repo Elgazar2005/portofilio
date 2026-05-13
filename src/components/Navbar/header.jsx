@@ -83,7 +83,7 @@ function Header() {
   }, []);
 
   return (
-    <Navbar className="!max-w-full w-full sticky z-50 top-0 px-4 py-2 lg:px-8 lg:py-4 bg-light-background dark:bg-dark-background">
+   <Navbar className="!max-w-full w-full sticky z-50 top-0 px-4 py-2 lg:px-8 lg:py-4 !bg-light-background dark:!bg-dark-background !border-0 !shadow-none">
       <div className="flex items-center justify-between text-blue-gray-900 ">
         {/* Left - Logo */}
         <div className="flex-1 text-dark-background dark:text-light-background">

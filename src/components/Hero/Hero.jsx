@@ -11,7 +11,6 @@ function Hero() {
     <section className="min-h-screen flex items-center justify-center px-5 md:px-15 pt-20  bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-gray-800 dark:via-light-500 dark:to-blue-800">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          
           {/* Left Side - Text */}
           <div className="order-2 md:order-1">
             <h1 className="font-['Poppins'] font-bold text-4xl md:text-5xl lg:text-6xl mb-6 text-foreground text-black dark:text-dark-foreground">
@@ -31,31 +30,30 @@ function Hero() {
               React and Python. I enjoy solving real-world problems through code
               and continuously learning new technologies.
             </p>
-            <div className="flex flex-wrap gap-4">
-  <button
-    onClick={scrollToProjects}
-    className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg bg-light-blue-500 text-white "
-  >
-    Projects
-  </button>
+            <div className="flex flex-wrap gap-4 mb-4">
+              <button
+                onClick={scrollToProjects}
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg bg-light-blue-500 text-white "
+              >
+                Projects
+              </button>
 
-  <a
-    href="#contact"
-    onClick={(e) => {
-      e.preventDefault();
-      document
-        .getElementById("contact")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }}
-    className="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all transform hover:scale-105 dark:text-white"
-  >
-    Get In Touch
-  </a>
-</div>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all transform hover:scale-105 dark:text-white"
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center items-center ">
             <div className="relative flex items-center justify-center">
-
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl "></div>
               <img
                 src={hero}
@@ -65,7 +63,6 @@ function Hero() {
               <div className="absolute -inset-2 border-4 border-primary/30 rounded-full animate-pulse"></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
