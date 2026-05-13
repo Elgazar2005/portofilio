@@ -12,7 +12,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import useTheme from "../../hooks/usetheme";
 import { Link } from "react-router-dom";
 
-function NavList() {
+function NavList({ onLinkClick }) {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:justify-center lg:gap-6 ">
       <Typography
@@ -22,6 +22,7 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
+          onClick={onLinkClick}
           href="#"
           className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
         >
@@ -35,6 +36,7 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
+          onClick={onLinkClick}
           href="#about"
           className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
         >
@@ -48,6 +50,7 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
+          onClick={onLinkClick}
           href="#"
           className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
         >
@@ -61,6 +64,7 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
+          onClick={onLinkClick}
           href="#"
           className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
         >
@@ -83,7 +87,7 @@ function Header() {
   }, []);
 
   return (
-   <Navbar className="!max-w-full w-full sticky z-50 top-0 px-4 py-2 lg:px-8 lg:py-4 !bg-light-background dark:!bg-dark-background !border-0 !shadow-none">
+    <Navbar className="!max-w-full w-full sticky z-50 top-0 px-4 py-2 lg:px-8 lg:py-4 !bg-light-background dark:!bg-dark-background !border-0 !shadow-none">
       <div className="flex items-center justify-between text-blue-gray-900 ">
         {/* Left - Logo */}
         <div className="flex-1 text-dark-background dark:text-light-background">
@@ -168,8 +172,7 @@ function Header() {
 
       {/* Mobile Menu */}
       <Collapse open={openNav}>
-        <NavList />
-        {/* Social Icons in mobile menu */}
+       <NavList onLinkClick={() => setOpenNav(false)} />
       </Collapse>
     </Navbar>
   );
