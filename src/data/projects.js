@@ -1,5 +1,5 @@
 import portfolioImg from "../assets/Cuisine.jpg";
-import speedy from "../assets/speedy.png";
+import speedy from "../assets/Speedy.png";
 import rentigoImg from "../assets/rentigo.png";
 
 export const projects = [
