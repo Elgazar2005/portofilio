@@ -61,7 +61,7 @@ function About() {
   
   <Card className="w-full rounded-lg p-6 hover:shadow-lg dark:hover:shadow-dark-primary/50 transition-shadow bg-light-card dark:bg-dark-card">
     <CardBody>
-      <Typography variant="h5" color="blue-gray" className="mb-4 flex gap-3 items-center ">
+      <Typography as="div" color="blue-gray" className="mb-4 flex gap-3 items-center ">
         <div className="bg-light-blue-400/10 dark:bg-primary/20 p-2 rounded-lg">
           <Code className="w-5 h-5 text-light-blue-300" />
         </div>
@@ -81,7 +81,7 @@ function About() {
 
   <Card className="w-full rounded-lg p-6 hover:shadow-lg dark:hover:shadow-dark-primary/50 transition-shadow bg-light-card dark:bg-dark-card">
     <CardBody>
-      <Typography variant="h5" color="blue-gray" className="mb-4 flex gap-3 items-center">
+      <Typography as="div" color="blue-gray" className="mb-4 flex gap-3 items-center">
         <div className="bg-light-chart-5/40 dark:bg-accent/20 p-2 rounded-lg">
           <Users className="w-5 h-5 text-white" />
         </div>
@@ -101,7 +101,7 @@ function About() {
 
   <Card className="w-full rounded-lg p-6 hover:shadow-lg dark:hover:shadow-dark-primary/50 transition-shadow bg-light-card dark:bg-dark-card">
     <CardBody>
-      <Typography variant="h5" color="blue-gray" className="mb-4 flex gap-3 items-center">
+      <Typography as="div" color="blue-gray" className="mb-4 flex gap-3 items-center">
         <div className="bg-light-sidebar-ring dark:bg-secondary/20 p-2 rounded-lg">
           <Globe className="w-5 h-5 text-secondary" />
         </div>

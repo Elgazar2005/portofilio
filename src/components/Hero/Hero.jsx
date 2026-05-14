@@ -50,6 +50,18 @@ function Hero() {
               >
                 Get In Touch
               </a>
+
+              <button
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/Omar_Elgazar_CV.pdf";
+                  link.download = "Omar_Elgazar_CV.pdf";
+                  link.click();
+                }}
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg bg-light-blue-500 text-white"
+              >
+                Download CV
+              </button>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center items-center ">

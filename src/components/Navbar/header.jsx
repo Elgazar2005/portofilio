@@ -51,7 +51,7 @@ function NavList({ onLinkClick }) {
       >
         <a
           onClick={onLinkClick}
-          href="#"
+          href="#projects"
           className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
         >
           Projects
