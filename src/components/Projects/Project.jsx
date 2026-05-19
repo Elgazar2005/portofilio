@@ -14,7 +14,7 @@ function Project() {
   return (
     <section
       id="projects"
-      className="py-20 px-5 md:px-15 bg-light-background dark:!bg-dark-background"
+      className="py-20 px-4 sm:px-6 md:px-10 lg:px-16 bg-light-background dark:!bg-dark-background"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="font-['Poppins'] font-bold text-3xl md:text-4xl mb-4 text-center text-light-sidebar-primary dark:text-dark-foreground">
@@ -25,17 +25,17 @@ function Project() {
           engineering
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="w-full rounded-lg p-6 hover:shadow-lg dark:hover:shadow-dark-primary/50 transition-shadow bg-light-card dark:bg-dark-card"
+              className="flex flex-col h-full rounded-lg hover:shadow-lg dark:hover:shadow-dark-primary/50 transition-shadow bg-light-card dark:bg-dark-card"
             >
               {/* Card Image */}
               <CardHeader
                 floated={false}
                 color="blue-gray"
-                className="h-48 m-0 rounded-b-none"
+                className="h-44 sm:h-48 m-0 rounded-b-none shrink-0"
               >
                 {project.image ? (
                   <img
@@ -51,11 +51,11 @@ function Project() {
               </CardHeader>
 
               {/* Card Body */}
-              <CardBody className="flex flex-col flex-1 p-5">
+              <CardBody className="flex flex-col flex-1 p-4 sm:p-5">
                 <Typography
                   variant="h5"
                   color="blue-gray"
-                  className="mb-2 font-semibold dark:text-white"
+                  className="mb-2 font-semibold dark:text-white text-base sm:text-lg"
                 >
                   {project.title}
                 </Typography>
@@ -68,7 +68,7 @@ function Project() {
                 </Typography>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.technologies.map((tech) => (
                     <Chip
                       key={tech}
@@ -83,19 +83,19 @@ function Project() {
               </CardBody>
 
               {/* Card Footer */}
-              <CardFooter className="pt-0 px-5 pb-5 flex gap-3">
+              <CardFooter className="pt-0 px-4 sm:px-5 pb-4 sm:pb-5 flex flex-wrap gap-2 sm:gap-3 shrink-0">
                 <Button
-                  size="md"
+                  size="sm"
                   fullWidth
                   variant="outlined"
                   onClick={() => window.open(project.github, "_blank")}
-                  className="flex items-center justify-center gap-2 bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all transform hover:scale-105 dark:text-white"
+                  className="flex items-center justify-center gap-2 bg-transparent border-2 border-primary text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all transform hover:scale-105 dark:text-white text-xs sm:text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="h-4 w-4 "
+                    className="h-4 w-4"
                   >
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
                   </svg>
@@ -104,11 +104,11 @@ function Project() {
 
                 {project.demo && (
                   <Button
-                    size="md"
+                    size="sm"
                     fullWidth
                     color="blue"
                     onClick={() => window.open(project.demo, "_blank")}
-                    className="flex items-center justify-center gap-2"
+                    className="flex items-center justify-center gap-2 text-xs sm:text-sm"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -129,11 +129,15 @@ function Project() {
             </Card>
           ))}
         </div>
-         <div className="flex justify-center mt-8">
-          <Button 
-                    color="blue"
-                    onClick={() => window.open("https://github.com/Elgazar2005?tab=repositories", "_blank")}
-                    className="flex items-center justify-center gap-2">View More</Button>
+
+        <div className="flex justify-center mt-8">
+          <Button
+            color="blue"
+            onClick={() => window.open("https://github.com/Elgazar2005?tab=repositories", "_blank")}
+            className="flex items-center justify-center gap-2"
+          >
+            View More
+          </Button>
         </div>
       </div>
     </section>

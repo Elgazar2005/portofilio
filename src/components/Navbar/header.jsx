@@ -65,7 +65,7 @@ function NavList({ onLinkClick }) {
       >
         <a
           onClick={onLinkClick}
-          href="#"
+          href="#contact"
           className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
         >
           Contact
@@ -87,94 +87,96 @@ function Header() {
   }, []);
 
   return (
-    <Navbar className="!max-w-full w-full sticky z-50 top-0 px-4 py-2 lg:px-8 lg:py-4 !bg-light-background dark:!bg-dark-background !border-0 !shadow-none">
-      <div className="flex items-center justify-between text-blue-gray-900 ">
-        {/* Left - Logo */}
-        <div className="flex-1 text-dark-background dark:text-light-background">
-          <Typography
-            as="a"
-            href="#"
-            variant="h6"
-            className="cursor-pointer py-1.5 font-serif text-xl"
-          >
-            Omar Elgazar
-          </Typography>
-        </div>
-
-        {/* Center - NavList (desktop only) */}
-        <div className="hidden lg:flex flex-1 justify-center ">
-          <NavList />
-        </div>
-
-        {/* Right - Icons + Mobile Toggle */}
-        <div className="flex-1 flex items-center justify-end gap-3">
-          {/* Social Icons - desktop only */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link to="https://www.linkedin.com/in/omar-elgazar-60352635a/">
-              <FiLinkedin className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
-            </Link>
-            <Link to="https://github.com/Elgazar2005">
-              <FaGithub className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
-            </Link>
-            <a
-              href="https://mail.google.com/mail/?view=cm&to=omarelgazar512@gmail.com"
-              target="_blank"
-              rel="noreferrer"
+    <div className="!bg-light-background dark:!bg-dark-background sticky z-50 top-0">
+      <Navbar className="!max-w-full w-full  px-4 py-2 lg:px-8 lg:py-4 !bg-light-background dark:!bg-dark-background !border-0 !shadow-none">
+        <div className="flex items-center justify-between text-blue-gray-900 ">
+          {/* Left - Logo */}
+          <div className="flex-1 text-dark-background dark:text-light-background">
+            <Typography
+              as="a"
+              href="#"
+              variant="h6"
+              className="cursor-pointer py-1.5 font-serif text-xl"
             >
-              <CgMail className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
-            </a>
+              Omar Elgazar
+            </Typography>
           </div>
 
-          {/* Theme Toggle */}
-          <IconButton
-            size="sm"
-            variant="text"
-            onClick={mode}
-            className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
-          >
-            {theme === "dark" ? (
-              <FaSun className="h-4 w-4" />
-            ) : (
-              <FaMoon className="h-4 w-4" />
-            )}
-          </IconButton>
-          <div className="lg:hidden flex gap-4">
-            <Link to="https://www.linkedin.com/in/omar-elgazar-60352635a/">
-              <FiLinkedin className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
-            </Link>
-            <Link to="https://github.com/Elgazar2005">
-              <FaGithub className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
-            </Link>
-            <a
-              href="https://mail.google.com/mail/?view=cm&to=omarelgazar512@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <CgMail className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
-            </a>
+          {/* Center - NavList (desktop only) */}
+          <div className="hidden lg:flex flex-1 justify-center ">
+            <NavList />
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <IconButton
-            variant="text"
-            className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
-            ripple={false}
-            onClick={() => setOpenNav(!openNav)}
-          >
-            {openNav ? (
-              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-            ) : (
-              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-            )}
-          </IconButton>
-        </div>
-      </div>
+          {/* Right - Icons + Mobile Toggle */}
+          <div className="flex-1 flex items-center justify-end gap-3">
+            {/* Social Icons - desktop only */}
+            <div className="hidden lg:flex items-center gap-3">
+              <button onClick={()=>window.open("https://www.linkedin.com/in/omar-elgazar-60352635a/","_blank")}>
+                <FiLinkedin className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
+              </button>
+              <button onClick={() => window.open("https://github.com/Elgazar2005", "_blank")}>
+                <FaGithub className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
+              </button>
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=omarelgazar512@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <CgMail className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
+              </a>
+            </div>
 
-      {/* Mobile Menu */}
-      <Collapse open={openNav}>
-       <NavList onLinkClick={() => setOpenNav(false)} />
-      </Collapse>
-    </Navbar>
+            {/* Theme Toggle */}
+            <IconButton
+              size="sm"
+              variant="text"
+              onClick={mode}
+              className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
+            >
+              {theme === "dark" ? (
+                <FaSun className="h-4 w-4" />
+              ) : (
+                <FaMoon className="h-4 w-4" />
+              )}
+            </IconButton>
+            <div className="lg:hidden flex gap-4">
+              <Link to="https://www.linkedin.com/in/omar-elgazar-60352635a/">
+                <FiLinkedin className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
+              </Link>
+              <Link to="https://github.com/Elgazar2005">
+                <FaGithub className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
+              </Link>
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=omarelgazar512@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <CgMail className="flex items-center transition-colors font-serif text-xl text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400" />
+              </a>
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <IconButton
+              variant="text"
+              className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-light-foreground dark:text-dark-foreground hover:text-blue-500 dark:hover:text-blue-400"
+              ripple={false}
+              onClick={() => setOpenNav(!openNav)}
+            >
+              {openNav ? (
+                <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+              ) : (
+                <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+              )}
+            </IconButton>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <Collapse open={openNav}>
+          <NavList onLinkClick={() => setOpenNav(false)} />
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }
 
