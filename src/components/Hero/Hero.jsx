@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../../assets/hero.png";
+import hero from "../../assets/hero.jpeg";
 
 function Hero() {
   const scrollToProjects = () => {
@@ -70,7 +70,7 @@ function Hero() {
               <img
                 src={hero}
                 alt="Omar Elgazar"
-                className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] rounded-full object-cover object-top border-8 border-background shadow-2xl z-10"
+                className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[510px] rounded-full object-cover object-top border-8 border-background shadow-2xl z-10"
               />
               <div className="absolute -inset-2 border-4 border-primary/30 rounded-full animate-pulse"></div>
             </div>

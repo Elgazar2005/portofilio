@@ -37,7 +37,7 @@ function Contact() {
         <p className="text-center text-light-muted-foreground dark:text-dark-muted-foreground mb-12 max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? Feel free to reach out!
         </p>
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid  gap-12 max-w-5xl mx-auto ">
           <Card className="bg-card dark:bg-card p-8 rounded-lg shadow-lg border border-border">
             <h3 className="font-['Poppins'] font-semibold text-2xl mb-6 text-foreground">
               Send a Message
